@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class WsImage</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Ws_logged_inModel.html">Ws_logged_inModel</a></li>
+				<li><a href="class-Ws_permissionsModel.html">Ws_permissionsModel</a></li>
+				<li><a href="class-Ws_role_permModel.html">Ws_role_permModel</a></li>
+				<li><a href="class-Ws_rolesModel.html">Ws_rolesModel</a></li>
+				<li><a href="class-Ws_user_roleModel.html">Ws_user_roleModel</a></li>
+				<li><a href="class-Ws_userModel.html">Ws_userModel</a></li>
+				<li><a href="class-WsAuth.html">WsAuth</a></li>
+				<li><a href="class-WsauthController.html">WsauthController</a></li>
+				<li><a href="class-WsChart.html">WsChart</a></li>
+				<li><a href="class-WsConfig.html">WsConfig</a></li>
+				<li><a href="class-WsController.html">WsController</a></li>
+				<li><a href="class-WsDatabase.html">WsDatabase</a></li>
+				<li><a href="class-WsForm.html">WsForm</a></li>
+				<li class="active"><a href="class-WsImage.html">WsImage</a></li>
+				<li><a href="class-WsLocalize.html">WsLocalize</a></li>
+				<li><a href="class-WsModel.html">WsModel</a></li>
+				<li><a href="class-WsModelForm.html">WsModelForm</a></li>
+				<li><a href="class-WsModelGridView.html">WsModelGridView</a></li>
+				<li><a href="class-WsUrl.html">WsUrl</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-callHook.html">callHook</a></li>
+				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class WsImage</h1>
+
+
+	<div class="description">
+	<p>WsImage
+Provides simple interface for working with images using GD library.</p>
+
+<p>Example usage:</p>
+
+<pre><span class="php-var">$img</span> = <span class="php-keyword1">new</span> WsImage()
+
+<span class="php-comment"># load image from file</span>
+<span class="php-var">$img</span>-&gt;read(<span class="php-quote">'public/img/webiness_white.png'</span>);
+
+<span class="php-comment"># add wattermark to image</span>
+<span class="php-var">$img</span>-&gt;addWatermark(<span class="php-quote">'copyright (c) me@myaddress.com'</span>);
+
+<span class="php-comment"># show image thumbnail</span>
+<span class="php-var">$img</span>-&gt;showThumbnail();
+
+<span class="php-comment"># show image</span>
+<span class="php-var">$img</span>-&gt;show();</pre>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-WsImage.html#2-262" title="Go to source code">WsImage.class.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-WsImage.html#46-57" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read" id="_read">
+
+		<td class="attributes"><code>
+			 public 
+
+			booleane
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read">#</a>
+		<code><a href="source-class-WsImage.html#60-99" title="Go to source code">read</a>( <span>string <var>$file</var></span> )</code>
+
+		<div class="description short">
+			<p>Read image from file.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Read image from file.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd><p>Image file name with path relative to application
+root directory</p></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					booleane<br>suceess or fail
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="show" id="_show">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_show">#</a>
+		<code><a href="source-class-WsImage.html#102-124" title="Go to source code">show</a>( )</code>
+
+		<div class="description short">
+			<p>Show image in browser</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Show image in browser</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="showThumbnail" id="_showThumbnail">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_showThumbnail">#</a>
+		<code><a href="source-class-WsImage.html#127-183" title="Go to source code">showThumbnail</a>( <span>integer <var>$width</var> = <span class="php-num">100</span></span>, <span>integer <var>$height</var> = <span class="php-num">100</span></span>, <span>string <var>$text</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			<p>Show image thumbnail</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Show image thumbnail</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$width</var></dt>
+					<dd>Thumbnail width</dd>
+					<dt><var>$height</var></dt>
+					<dd>Thumbnail height</dd>
+					<dt><var>$text</var></dt>
+					<dd>Thumbnail text</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addWatermark" id="_addWatermark">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addWatermark">#</a>
+		<code><a href="source-class-WsImage.html#186-225" title="Go to source code">addWatermark</a>( <span>string <var>$text</var></span>, <span>integer <var>$x</var> = <span class="php-num">8</span></span>, <span>integer <var>$y</var> = <span class="php-num">8</span> </span>, <span>string <var>$font</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$size</var> = <span class="php-num">11</span> </span> )</code>
+
+		<div class="description short">
+			<p>Add watermark text to image</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add watermark text to image</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd>Watermark text</dd>
+					<dt><var>$x</var></dt>
+					<dd>Verical offset for text</dd>
+					<dt><var>$y</var></dt>
+					<dd>Horizontal offset for text</dd>
+					<dt><var>$font</var></dt>
+					<dd>Full path, relative to server root, of font file</dd>
+					<dt><var>$size</var></dt>
+					<dd>Font size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWidth" id="_getWidth">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWidth">#</a>
+		<code><a href="source-class-WsImage.html#228-243" title="Go to source code">getWidth</a>( )</code>
+
+		<div class="description short">
+			<p>Get image width</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get image width</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>$width Image width
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHeight" id="_getHeight">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getHeight">#</a>
+		<code><a href="source-class-WsImage.html#246-261" title="Go to source code">getHeight</a>( )</code>
+
+		<div class="description short">
+			<p>Get image height</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get image height</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>$height Image height
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

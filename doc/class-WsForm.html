@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class WsForm</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Ws_logged_inModel.html">Ws_logged_inModel</a></li>
+				<li><a href="class-Ws_permissionsModel.html">Ws_permissionsModel</a></li>
+				<li><a href="class-Ws_role_permModel.html">Ws_role_permModel</a></li>
+				<li><a href="class-Ws_rolesModel.html">Ws_rolesModel</a></li>
+				<li><a href="class-Ws_user_roleModel.html">Ws_user_roleModel</a></li>
+				<li><a href="class-Ws_userModel.html">Ws_userModel</a></li>
+				<li><a href="class-WsAuth.html">WsAuth</a></li>
+				<li><a href="class-WsauthController.html">WsauthController</a></li>
+				<li><a href="class-WsChart.html">WsChart</a></li>
+				<li><a href="class-WsConfig.html">WsConfig</a></li>
+				<li><a href="class-WsController.html">WsController</a></li>
+				<li><a href="class-WsDatabase.html">WsDatabase</a></li>
+				<li class="active"><a href="class-WsForm.html">WsForm</a></li>
+				<li><a href="class-WsImage.html">WsImage</a></li>
+				<li><a href="class-WsLocalize.html">WsLocalize</a></li>
+				<li><a href="class-WsModel.html">WsModel</a></li>
+				<li><a href="class-WsModelForm.html">WsModelForm</a></li>
+				<li><a href="class-WsModelGridView.html">WsModelGridView</a></li>
+				<li><a href="class-WsUrl.html">WsUrl</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-callHook.html">callHook</a></li>
+				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class WsForm</h1>
+
+
+	<div class="description">
+	<p>WsForm
+Generates HTML form and form widgets.</p>
+
+<p>Example usage:</p>
+
+<pre><span class="php-var">$form</span> = <span class="php-keyword1">new</span> WsForm(WsUrl::<span class="php-keyword2">link</span>(<span class="php-quote">'controller'</span>, <span class="php-quote">'form_action_script'</span>);
+
+<span class="php-comment"># widgets</span>
+<span class="php-var">$form</span>-&gt;textInput(<span class="php-keyword1">array</span>(<span class="php-quote">'name'</span> =&gt; <span class="php-quote">'text_input'</span>));
+<span class="php-var">$form</span>-&gt;textInput(<span class="php-keyword1">array</span>(
+    <span class="php-quote">'name'</span> =&gt; <span class="php-quote">'date_input'</span>,
+    <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'date'</span>,
+    <span class="php-quote">'placeholder'</span> =&gt; <span class="php-quote">'enter date'</span>
+));
+
+<span class="php-var">$form</span>-&gt;show();</pre>
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-WsModelForm.html">WsModelForm</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-WsForm.html#2-545" title="Go to source code">WsForm.class.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-WsForm.html#51-70" title="Go to source code">__construct</a>( <span> <var>$action</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-WsForm.html#73-80" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="show" id="_show">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_show">#</a>
+		<code><a href="source-class-WsForm.html#112-123" title="Go to source code">show</a>( )</code>
+
+		<div class="description short">
+			<p>Display generated form on screen</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Display generated form on screen</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="hiddenInput" id="_hiddenInput">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_hiddenInput">#</a>
+		<code><a href="source-class-WsForm.html#125-157" title="Go to source code">hiddenInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add hidden input element to form</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add hidden input element to form</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>HTML parameters for <input type="hidden"></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="textInput" id="_textInput">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_textInput">#</a>
+		<code><a href="source-class-WsForm.html#160-283" title="Go to source code">textInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add text input element to form</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add text input element to form</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>HTML parameters for <input type="text"></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="textareaInput" id="_textareaInput">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_textareaInput">#</a>
+		<code><a href="source-class-WsForm.html#286-371" title="Go to source code">textareaInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add multiline text input to form</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add multiline text input to form</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>HTML parameters for <textarea></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="booleanInput" id="_booleanInput">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_booleanInput">#</a>
+		<code><a href="source-class-WsForm.html#374-447" title="Go to source code">booleanInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add checkbox to the form</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add checkbox to the form</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>HTML parameters for <input type="checkbox"></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="selectInput" id="_selectInput">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_selectInput">#</a>
+		<code><a href="source-class-WsForm.html#450-532" title="Go to source code">selectInput</a>( <span>array <var>$list</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Add selection box to the form</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Add selection box to the form</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$list</var></dt>
+					<dd>List of selections</dd>
+					<dt><var>$params</var></dt>
+					<dd>HTML parameters for <select> element</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="appendHTML" id="_appendHTML">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_appendHTML">#</a>
+		<code><a href="source-class-WsForm.html#535-544" title="Go to source code">appendHTML</a>( <span>string <var>$html</var></span> )</code>
+
+		<div class="description short">
+			<p>Append custom HTML to form</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Append custom HTML to form</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$html</var></dt>
+					<dd>HTML to append to form</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="submitButtonText" id="$submitButtonText">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsForm.html#37-40" title="Go to source code"><var>$submitButtonText</var></a>
+
+			<div class="description short">
+				<p>$submitButtonText Text for submit button</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$submitButtonText Text for submit button</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$submitButtonText" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="_form" id="$_form">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsForm.html#41-44" title="Go to source code"><var>$_form</var></a>
+
+			<div class="description short">
+				<p>$_form Form body</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$_form Form body</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$_form" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

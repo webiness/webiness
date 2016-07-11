@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class WsDatabase</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Ws_logged_inModel.html">Ws_logged_inModel</a></li>
+				<li><a href="class-Ws_permissionsModel.html">Ws_permissionsModel</a></li>
+				<li><a href="class-Ws_role_permModel.html">Ws_role_permModel</a></li>
+				<li><a href="class-Ws_rolesModel.html">Ws_rolesModel</a></li>
+				<li><a href="class-Ws_user_roleModel.html">Ws_user_roleModel</a></li>
+				<li><a href="class-Ws_userModel.html">Ws_userModel</a></li>
+				<li><a href="class-WsAuth.html">WsAuth</a></li>
+				<li><a href="class-WsauthController.html">WsauthController</a></li>
+				<li><a href="class-WsChart.html">WsChart</a></li>
+				<li><a href="class-WsConfig.html">WsConfig</a></li>
+				<li><a href="class-WsController.html">WsController</a></li>
+				<li class="active"><a href="class-WsDatabase.html">WsDatabase</a></li>
+				<li><a href="class-WsForm.html">WsForm</a></li>
+				<li><a href="class-WsImage.html">WsImage</a></li>
+				<li><a href="class-WsLocalize.html">WsLocalize</a></li>
+				<li><a href="class-WsModel.html">WsModel</a></li>
+				<li><a href="class-WsModelForm.html">WsModelForm</a></li>
+				<li><a href="class-WsModelGridView.html">WsModelGridView</a></li>
+				<li><a href="class-WsUrl.html">WsUrl</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-callHook.html">callHook</a></li>
+				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class WsDatabase</h1>
+
+
+	<div class="description">
+	<p>WsDatabase
+Is base class for working with database objects in Webiness
+framework. It handles connection to database server and exeecution of
+SQL commands.</p>
+
+<p>Example usage:</p>
+
+<pre><span class="php-var">$db</span> = <span class="php-keyword1">new</span> WsDatabase()
+
+<span class="php-comment"># query database</span>
+<span class="php-var">$res</span> = <span class="php-var">$db</span>-&gt;query(<span class="php-quote">'SELECT name FROM mytable WHERE id&lt;=:id'</span>, <span class="php-keyword1">array</span>(
+     <span class="php-quote">':id'</span> =&gt; <span class="php-num">3</span>
+));
+<span class="php-comment"># number of results</span>
+<span class="php-var">$number_of_results</span> = <span class="php-var">$db</span>-&gt;nRows;
+
+<span class="php-comment"># update record in database</span>
+<span class="php-var">$db</span>-&gt;execute(<span class="php-quote">'UPDATE mytable SET name=:name WHERE id=:id'</span>,
+    <span class="php-keyword1">array</span>(<span class="php-quote">':name'</span> =&gt; <span class="php-quote">'new'</span>, <span class="php-quote">':id'</span> =&gt; <span class="php-num">3</span>));</pre>
+	</div>
+
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-WsModel.html">WsModel</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-Ws_logged_inModel.html">Ws_logged_inModel</a>, 
+			<a href="class-Ws_permissionsModel.html">Ws_permissionsModel</a>, 
+			<a href="class-Ws_role_permModel.html">Ws_role_permModel</a>, 
+			<a href="class-Ws_rolesModel.html">Ws_rolesModel</a>, 
+			<a href="class-Ws_user_roleModel.html">Ws_user_roleModel</a>, 
+			<a href="class-Ws_userModel.html">Ws_userModel</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-WsDatabase.html#2-212" title="Go to source code">WsDatabase.class.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-WsDatabase.html#47-79" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-class-WsDatabase.html#82-85" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-class-WsDatabase.html#88-145" title="Go to source code">query</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Prepare and execute custom SQL query that return results (SELECT).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepare and execute custom SQL query that return results (SELECT).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>Custom SQL query</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>List of parameters forwarded to $query</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>$results Results of SQL query
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code><a href="source-class-WsDatabase.html#148-201" title="Go to source code">execute</a>( <span>string <var>$sql</var></span>, <span>array <var>$parameters</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			<p>Prepare and execute custom SQL query that don't return results
+(INSERT, UPDATE, DELETE).</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepare and execute custom SQL query that don't return results
+(INSERT, UPDATE, DELETE).</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>Custom SQL query</dd>
+					<dt><var>$parameters</var></dt>
+					<dd>List of parameters forwarded to $query</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="close" id="_close">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_close">#</a>
+		<code><a href="source-class-WsDatabase.html#204-211" title="Go to source code">close</a>( )</code>
+
+		<div class="description short">
+			<p>Closes connection to database server.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Closes connection to database server.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="nRows" id="$nRows">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsDatabase.html#33-39" title="Go to source code"><var>$nRows</var></a>
+
+			<div class="description short">
+				<p>$nRows Number of affected or returned rows</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$nRows Number of affected or returned rows</p>
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-WsDatabase.html#_query">WsDatabase::query()</a></code><br>
+							<code><a href="class-WsDatabase.html#_execute">WsDatabase::execute()</a></code><br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$nRows" class="anchor">#</a>
+				<code></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="isConnected" id="$isConnected">
+		<td class="attributes"><code>
+			public  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsDatabase.html#40-44" title="Go to source code"><var>$isConnected</var></a>
+
+			<div class="description short">
+				<p>$isConnected Is database connection live</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$isConnected Is database connection live</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$isConnected" class="anchor">#</a>
+				<code><span class="php-keyword1">false</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

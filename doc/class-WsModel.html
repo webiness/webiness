@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class WsModel</title>
+
+	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+		</div>
+
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Ws_logged_inModel.html">Ws_logged_inModel</a></li>
+				<li><a href="class-Ws_permissionsModel.html">Ws_permissionsModel</a></li>
+				<li><a href="class-Ws_role_permModel.html">Ws_role_permModel</a></li>
+				<li><a href="class-Ws_rolesModel.html">Ws_rolesModel</a></li>
+				<li><a href="class-Ws_user_roleModel.html">Ws_user_roleModel</a></li>
+				<li><a href="class-Ws_userModel.html">Ws_userModel</a></li>
+				<li><a href="class-WsAuth.html">WsAuth</a></li>
+				<li><a href="class-WsauthController.html">WsauthController</a></li>
+				<li><a href="class-WsChart.html">WsChart</a></li>
+				<li><a href="class-WsConfig.html">WsConfig</a></li>
+				<li><a href="class-WsController.html">WsController</a></li>
+				<li><a href="class-WsDatabase.html">WsDatabase</a></li>
+				<li><a href="class-WsForm.html">WsForm</a></li>
+				<li><a href="class-WsImage.html">WsImage</a></li>
+				<li><a href="class-WsLocalize.html">WsLocalize</a></li>
+				<li class="active"><a href="class-WsModel.html">WsModel</a></li>
+				<li><a href="class-WsModelForm.html">WsModelForm</a></li>
+				<li><a href="class-WsModelGridView.html">WsModelGridView</a></li>
+				<li><a href="class-WsUrl.html">WsUrl</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-callHook.html">callHook</a></li>
+				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class WsModel</h1>
+
+
+	<div class="description">
+	<p>WsModel
+Is model part of Model-View-Controller. WsModel is the base
+class providing the common features needed by data model objects.</p>
+
+<p>Example usage:</p>
+
+<pre><span class="php-keyword1">class</span> TestModel <span class="php-keyword1">extends</span> WsModel
+{
+    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct()
+    {
+        <span class="php-comment"># autodetect columns, column types, etc</span>
+        parent::__construct();
+
+        <span class="php-comment"># change some column types</span>
+        <span class="php-comment"># change column type for column</span>
+        <span class="php-var">$this</span>-&gt;columnType[<span class="php-quote">'enter_date'</span>] = <span class="php-quote">'date_type'</span>;
+        <span class="php-comment"># change column type for other column</span>
+        <span class="php-var">$this</span>-&gt;columnType[<span class="php-quote">'is_checked'</span>] = <span class="php-quote">'bool_type'</span>;
+        <span class="php-comment"># leave other column types unchanged (autodetected)</span>
+    }
+}
+
+<span class="php-comment"># use model</span>
+<span class="php-var">$m</span> = <span class="php-keyword1">new</span> TestModel();
+
+<span class="php-comment"># get one record with ID 100 from database</span>
+<span class="php-var">$m</span>-&gt;getOne(<span class="php-num">100</span>);
+<span class="php-comment"># show field value for retrived record</span>
+<span class="php-keyword1">echo</span> <span class="php-var">$m</span>-&gt;name.<span class="php-quote">'\n'</span>;
+
+<span class="php-comment"># change value of one column in record with ID 100</span>
+<span class="php-var">$m</span>-&gt;name = <span class="php-quote">'New Name'</span>;
+<span class="php-comment"># save changes</span>
+<span class="php-var">$m</span>-&gt;save();
+
+<span class="php-comment"># delete record with ID 100 from database</span>
+<span class="php-var">$m</span>-&gt;id = <span class="php-num">100</span>;
+<span class="php-var">$m</span>-&gt;<span class="php-keyword2">delete</span>();
+<span class="php-comment"># same as above</span>
+<span class="php-var">$m</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-num">100</span>);</pre>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-WsDatabase.html"><span>WsDatabase</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>WsModel</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-Ws_logged_inModel.html">Ws_logged_inModel</a>, 
+			<a href="class-Ws_permissionsModel.html">Ws_permissionsModel</a>, 
+			<a href="class-Ws_role_permModel.html">Ws_role_permModel</a>, 
+			<a href="class-Ws_rolesModel.html">Ws_rolesModel</a>, 
+			<a href="class-Ws_user_roleModel.html">Ws_user_roleModel</a>, 
+			<a href="class-Ws_userModel.html">Ws_userModel</a>
+	</div>
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-WsModel.html#2-819" title="Go to source code">WsModel.class.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-WsModel.html#126-143" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-WsDatabase.html#___construct">WsDatabase::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setTableName" id="_setTableName">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setTableName">#</a>
+		<code><a href="source-class-WsModel.html#146-303" title="Go to source code">setTableName</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			<p>Sets name of database table on which model references. Also updates all
+propertyes that hold informations about table columns:
+     $column
+     $columnCanBeNull
+     $columnHeaders
+     $foreignKeys
+     $primaryKey</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Sets name of database table on which model references. Also updates all
+propertyes that hold informations about table columns: $column $columnCanBeNull $columnHeaders $foreignKeys $primaryKey</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>Name of database table</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="idExists" id="_idExists">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_idExists">#</a>
+		<code><a href="source-class-WsModel.html#306-351" title="Go to source code">idExists</a>( <span>integer <var>$id</var></span> )</code>
+
+		<div class="description short">
+			<p>Check if record, which primary key has value of parameter $id, exists
+in database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Check if record, which primary key has value of parameter $id, exists
+in database.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var></dt>
+					<dd>Value of primary key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if record exists or false if not.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="beforeDelete" id="_beforeDelete">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeDelete">#</a>
+		<code><a href="source-class-WsModel.html#354-363" title="Go to source code">beforeDelete</a>( )</code>
+
+		<div class="description short">
+			<p>This method is invoked before deleting a record from database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked before deleting a record from database.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True on success or false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code><a href="source-class-WsModel.html#366-413" title="Go to source code">delete</a>( )</code>
+
+		<div class="description short">
+			<p>Delete record from database.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Delete record from database.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True on success or false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="beforeSave" id="_beforeSave">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_beforeSave">#</a>
+		<code><a href="source-class-WsModel.html#416-425" title="Go to source code">beforeSave</a>( )</code>
+
+		<div class="description short">
+			<p>This method is invoked before saving a record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>This method is invoked before saving a record.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True on success or false otherwise
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="_save">
+
+		<td class="attributes"><code>
+			 public 
+
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_save">#</a>
+		<code><a href="source-class-WsModel.html#428-514" title="Go to source code">save</a>( )</code>
+
+		<div class="description short">
+			<p>Saves record to database. If primary_key column with specified value
+allready exists then perform update of record and if not then perform
+insert of new record.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Saves record to database. If primary_key column with specified value
+allready exists then perform update of record and if not then perform
+insert of new record.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True on success or false on error
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getOne" id="_getOne">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getOne">#</a>
+		<code><a href="source-class-WsModel.html#517-605" title="Go to source code">getOne</a>( <span>integer <var>$id</var>,…</span> )</code>
+
+		<div class="description short">
+			<p>Get one record from table.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Get one record from table.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$id</var>,…</dt>
+					<dd>Value of primary_key column which will be returned</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>$results if record is found or false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAll" id="_getAll">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAll">#</a>
+		<code><a href="source-class-WsModel.html#608-695" title="Go to source code">getAll</a>( <span>string <var>$order</var> = <span class="php-quote">''</span></span>, <span>integer <var>$limit</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets all records from table</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets all records from table</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$order</var></dt>
+					<dd>represents in which order result should be returned</dd>
+					<dt><var>$limit</var></dt>
+					<dd>limits number of results</dd>
+					<dt><var>$offset</var></dt>
+					<dd>starting record for return</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>$results if records exists or false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="search" id="_search">
+
+		<td class="attributes"><code>
+			 public 
+
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_search">#</a>
+		<code><a href="source-class-WsModel.html#698-798" title="Go to source code">search</a>( <span>string <var>$condition</var> = <span class="php-quote">''</span></span>, <span>string <var>$order</var> = <span class="php-quote">''</span></span>, <span>integer <var>$limit</var> = <span class="php-num">0</span></span>, <span>integer <var>$offset</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			<p>Gets all records from model that satisfaid specific condition.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets all records from model that satisfaid specific condition.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$condition</var></dt>
+					<dd>SQL condition</dd>
+					<dt><var>$order</var></dt>
+					<dd>represents in which order result should be returned</dd>
+					<dt><var>$limit</var></dt>
+					<dd>limits number of results</dd>
+					<dt><var>$offset</var></dt>
+					<dd>starting record for return</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					array<br>$results if records exists or false
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getNextId" id="_getNextId">
+
+		<td class="attributes"><code>
+			 public 
+
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getNextId">#</a>
+		<code><a href="source-class-WsModel.html#801-818" title="Go to source code">getNextId</a>( )</code>
+
+		<div class="description short">
+			<p>Gets next ID value from model</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Gets next ID value from model</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					integer<br>$next_id
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-WsDatabase.html#methods">WsDatabase</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-WsDatabase.html#___destruct">__destruct()</a>, 
+			<a href="class-WsDatabase.html#_close">close()</a>, 
+			<a href="class-WsDatabase.html#_execute">execute()</a>, 
+			<a href="class-WsDatabase.html#_query">query()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="className" id="$className">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#49-53" title="Go to source code"><var>$className</var></a>
+
+			<div class="description short">
+				<p>$className Name of model</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$className Name of model</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$className" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="tableName" id="$tableName">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#54-58" title="Go to source code"><var>$tableName</var></a>
+
+			<div class="description short">
+				<p>$tableName Name of database table</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$tableName Name of database table</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$tableName" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="metaName" id="$metaName">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#59-64" title="Go to source code"><var>$metaName</var></a>
+
+			<div class="description short">
+				<p>$metaName Long name (description) of database table</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$metaName Long name (description) of database table</p>
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-WsModel.html#_setTableName">WsModel::setTableName()</a></code><br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$metaName" class="anchor">#</a>
+				<code><span class="php-quote">''</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="columns" id="$columns">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#65-72" title="Go to source code"><var>$columns</var></a>
+
+			<div class="description short">
+				<p>List of table columns. This list is automaticaly populated during the
+class initialization.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>List of table columns. This list is automaticaly populated during the
+class initialization.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$columns" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="primary_key" id="$primary_key">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#73-77" title="Go to source code"><var>$primary_key</var></a>
+
+			<div class="description short">
+				<p>$primary_key Column that is primary key</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$primary_key Column that is primary key</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$primary_key" class="anchor">#</a>
+				<code><span class="php-quote">'id'</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="columnCanBeNull" id="$columnCanBeNull">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#78-82" title="Go to source code"><var>$columnCanBeNull</var></a>
+
+			<div class="description short">
+				<p>$columnCanBeNull List of columns that can store NULL values</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$columnCanBeNull List of columns that can store NULL values</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$columnCanBeNull" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="columnType" id="$columnType">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#83-89" title="Go to source code"><var>$columnType</var></a>
+
+			<div class="description short">
+				<p>$columnType List of column types</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$columnType List of column types</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$columnType" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="columnHeaders" id="$columnHeaders">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#90-96" title="Go to source code"><var>$columnHeaders</var></a>
+
+			<div class="description short">
+				<p>$columnHeaders List of column headers</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$columnHeaders List of column headers</p>
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-WsModelForm.html">WsModelForm</a></code><br>
+							<code><a href="class-WsModelGridView.html">WsModelGridView</a></code><br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$columnHeaders" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="foreignKeys" id="$foreignKeys">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#97-116" title="Go to source code"><var>$foreignKeys</var></a>
+
+			<div class="description short">
+				<p>List of arrays wich represents relations between two WsModel classes.
+This list is automaticaly populated during the class initialization
+with regresion that display properti is referencing to foreign column
+name.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>List of arrays wich represents relations between two WsModel classes.
+This list is automaticaly populated during the class initialization
+with regresion that display properti is referencing to foreign column
+name.</p>
+
+<p>Usage:
+\code{.php}
+$foreignKeys = array( 'column_name' => array( 'table' => 'foreign_table_name', 'column' => 'foreign_column_name', 'display' => 'foreign_column_that_would_be_used_for_display' )
+);
+\endcode</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$foreignKeys" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="hiddenColumns" id="$hiddenColumns">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-WsModel.html#117-123" title="Go to source code"><var>$hiddenColumns</var></a>
+
+			<div class="description short">
+				<p>$hiddenColumns List of columns that are hidden from user</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>$hiddenColumns List of columns that are hidden from user</p>
+
+					<h4>See</h4>
+					<div class="list">
+							<code><a href="class-WsModelForm.html">WsModelForm</a></code><br>
+							<code><a href="class-WsModelGridView.html">WsModelGridView</a></code><br>
+					</div>
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$hiddenColumns" class="anchor">#</a>
+				<code><span class="php-keyword1">array</span>()</code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-WsDatabase.html#properties">WsDatabase</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-WsDatabase.html#$isConnected"><var>$isConnected</var></a>, 
+			<a href="class-WsDatabase.html#$nRows"><var>$nRows</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
