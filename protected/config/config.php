@@ -13,7 +13,7 @@ WsConfig::set('db_user', 'webiness');
 // database user password
 WsConfig::set('db_password', 'webiness');
 // application name
-WsConfig::set('app_name', 'Webiness PHP Framework');
+WsConfig::set('app_name', 'Webiness');
 // application development stage (development | production)
 WsConfig::set('app_stage', 'development');
 // default timezone

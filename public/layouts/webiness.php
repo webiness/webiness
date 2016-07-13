@@ -12,7 +12,7 @@
     <meta property="og:title" content="Webiness PHP Framework"/>
     <meta property="og:site_name" content=""/>
     <meta property="og:type" content="website"/>
-    <title>Webiness Inventory<?php echo $WsTitle; ?></title>
+    <title><?php echo WsConfig::get('app_name').$WsTitle; ?></title>
 
     <link type="text/css" rel="stylesheet" href="<?php echo WsUrl::asset('css/webiness.css'); ?>" />
     <link type="text/css" rel="stylesheet" href="<?php echo WsUrl::asset('css/jquery-ui.min.css'); ?>" />
