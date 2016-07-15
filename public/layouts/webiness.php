@@ -6,11 +6,14 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Webiness is small MVC PHP framework"/>
-    <meta name="Keywords" content="" />
+
+    <meta name="description" content="Webiness is a lightweight PHP framework that helps you quickly write simple yet powerful web applications and APIs."/>
+    <meta name="Keywords" content="Webiness, framework, php, RESTful, MVC, CRUD, DAO, active record" />
     <meta name="robots" content="index, follow"/>
-    <meta property="og:title" content="Webiness PHP Framework"/>
-    <meta property="og:site_name" content=""/>
+    <meta property="og:title" content="Webiness Framework"/>
+    <meta property="og:site_name" content="Webiness Framework"/>
+    <meta property="og:url" content="http://www.webiness.org/"/>
+    <meta property="og:description" content="Webiness is a lightweight PHP framework that helps you quickly write simple yet powerful web applications and APIs."/>
     <meta property="og:type" content="website"/>
     <title><?php echo WsConfig::get('app_name').$WsTitle; ?></title>
 
@@ -39,6 +42,27 @@
         // initialize auth module
         $auth = new WsAuth();
     ?>
+    <!-- TITLE -->
+    <div class="row no-print">
+        <div class="column column-12 site-title">
+            <div style="display: table;" class="column column-10 column-offset-1">
+                <img
+                    width=80
+                    height=80
+                    style="vertical-align: middle; display: table-cell; margin: 15px;"
+                    src="<?php echo WsUrl::asset('img/webiness.png'); ?>"/>
+                <div
+                    style="vertical-align: middle; display: table-cell;">
+                    <h1 style="color: #d2dde2">
+                        Webiness
+                    </h1>
+                    <h3 style="color: #d2dde2">
+                        - build fast and secure web applications in short time -
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- HEADER -->
     <div class="row no-print">
         <div class="column column-10 column-offset-1 ws-header">
