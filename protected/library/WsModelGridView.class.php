@@ -61,13 +61,11 @@ class WsModelGridView
     /**
      * @var string $_edit_action AJAX url for editing gridview item
      */
-    private $_edit_action = WsSERVER_ROOT
-        .'/protected/library/ajax/WsEditModel.php';
+    private $_edit_action = '';
     /**
      * @var string $_delete_action AJAX url for removing gridview item
      */
-    private $_delete_action = WsSERVER_ROOT
-        .'/protected/library/ajax/WsDeleteFromModel.php';
+    private $_delete_action = '';
     /**
      * ID of element that will show edit dialog
      *
@@ -92,10 +90,14 @@ class WsModelGridView
         $this->_model = $model;
         $this->_order = $order;
 
+        $this->_edit_action = WsSERVER_ROOT
+            .'/protected/library/ajax/WsEditModel.php';
         if (trim($edit_action) != '') {
             $this->_edit_action = $edit_action;
         }
 
+        $this->_delete_action = WsSERVER_ROOT
+            .'/protected/library/ajax/WsDeleteFromModel.php';
         if (trim($delete_action) != '') {
             $this->_delete_action = $delete_action;
         }

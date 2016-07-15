@@ -29,7 +29,6 @@ long_line_column=80
 [files]
 current_page=0
 FILE_NAME_0=2752;PHP;0;EUTF-8;0;1;0;%2Fhome%2Fbojan%2Fpublic_html%2Fwebiness%2Fpublic%2Flayouts%2Fwebiness.php;0;4
-FILE_NAME_1=2983;HTML;0;EUTF-8;0;1;0;%2Ftmp%2Fepiphany-bojan-dHdFdn%2FviewsourceNW1EKY.html;0;4
 
 [prjorg]
 source_patterns=*.c;*.C;*.cpp;*.cxx;*.c++;*.cc;*.m;
