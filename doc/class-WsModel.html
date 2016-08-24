@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class WsModel</title>
+	<title>Class WsModel | Webiness API</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -51,6 +51,7 @@
 			<h3>Functions</h3>
 			<ul>
 				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-barcode.html">barcode</a></li>
 				<li><a href="function-callHook.html">callHook</a></li>
 				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
 			</ul>
@@ -97,35 +98,35 @@ class providing the common features needed by data model objects.</p>
 {
     <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> __construct()
     {
-        <span class="php-comment"># autodetect columns, column types, etc</span>
+        <span class="php-comment">// autodetect columns, column types, etc</span>
         parent::__construct();
 
-        <span class="php-comment"># change some column types</span>
-        <span class="php-comment"># change column type for column</span>
+        <span class="php-comment">// change some column types</span>
+        <span class="php-comment">// change column type for column</span>
         <span class="php-var">$this</span>-&gt;columnType[<span class="php-quote">'enter_date'</span>] = <span class="php-quote">'date_type'</span>;
-        <span class="php-comment"># change column type for other column</span>
+        <span class="php-comment">// change column type for other column</span>
         <span class="php-var">$this</span>-&gt;columnType[<span class="php-quote">'is_checked'</span>] = <span class="php-quote">'bool_type'</span>;
-        <span class="php-comment"># leave other column types unchanged (autodetected)</span>
+        <span class="php-comment">// leave other column types unchanged (autodetected)</span>
     }
 }
 
-<span class="php-comment"># use model</span>
+<span class="php-comment">// use model</span>
 <span class="php-var">$m</span> = <span class="php-keyword1">new</span> TestModel();
 
-<span class="php-comment"># get one record with ID 100 from database</span>
+<span class="php-comment">// get one record with ID 100 from database</span>
 <span class="php-var">$m</span>-&gt;getOne(<span class="php-num">100</span>);
-<span class="php-comment"># show field value for retrived record</span>
+<span class="php-comment">// show field value for retrived record</span>
 <span class="php-keyword1">echo</span> <span class="php-var">$m</span>-&gt;name.<span class="php-quote">'\n'</span>;
 
-<span class="php-comment"># change value of one column in record with ID 100</span>
+<span class="php-comment">// change value of one column in record with ID 100</span>
 <span class="php-var">$m</span>-&gt;name = <span class="php-quote">'New Name'</span>;
-<span class="php-comment"># save changes</span>
+<span class="php-comment">// save changes</span>
 <span class="php-var">$m</span>-&gt;save();
 
-<span class="php-comment"># delete record with ID 100 from database</span>
+<span class="php-comment">// delete record with ID 100 from database</span>
 <span class="php-var">$m</span>-&gt;id = <span class="php-num">100</span>;
 <span class="php-var">$m</span>-&gt;<span class="php-keyword2">delete</span>();
-<span class="php-comment"># same as above</span>
+<span class="php-comment">// same as above</span>
 <span class="php-var">$m</span>-&gt;<span class="php-keyword2">delete</span>(<span class="php-num">100</span>);</pre>
 	</div>
 
@@ -166,7 +167,7 @@ class providing the common features needed by data model objects.</p>
 		
 		
 
-			<b>Located at</b> <a href="source-class-WsModel.html#2-819" title="Go to source code">WsModel.class.php</a>
+			<b>Located at</b> <a href="source-class-WsModel.html#2-820" title="Go to source code">library/WsModel.class.php</a>
 		<br>
 	</div>
 
@@ -568,7 +569,7 @@ insert of new record.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getNextId">#</a>
-		<code><a href="source-class-WsModel.html#801-818" title="Go to source code">getNextId</a>( )</code>
+		<code><a href="source-class-WsModel.html#801-819" title="Go to source code">getNextId</a>( )</code>
 
 		<div class="description short">
 			<p>Gets next ID value from model</p>
@@ -849,11 +850,15 @@ This list is automaticaly populated during the class initialization
 with regresion that display properti is referencing to foreign column
 name.</p>
 
-<p>Usage:
-\code{.php}
-$foreignKeys = array( 'column_name' => array( 'table' => 'foreign_table_name', 'column' => 'foreign_column_name', 'display' => 'foreign_column_that_would_be_used_for_display' )
-);
-\endcode</p>
+<p>Usage:</p>
+
+<pre><span class="php-var">$foreignKeys</span> = <span class="php-keyword1">array</span>(
+    <span class="php-quote">'column_name'</span> =&gt; <span class="php-keyword1">array</span>(
+        <span class="php-quote">'table'</span> =&gt; <span class="php-quote">'foreign_table_name'</span>,
+        <span class="php-quote">'column'</span> =&gt; <span class="php-quote">'foreign_column_name'</span>,
+        <span class="php-quote">'display'</span> =&gt; <span class="php-quote">'foreign_column_that_would_be_used_for_display'</span>
+    )
+);</pre>
 
 			</div>
 		</td>
@@ -913,7 +918,7 @@ $foreignKeys = array( 'column_name' => array( 'table' => 'foreign_table_name', '
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Webiness API API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class WsForm</title>
+	<title>Class WsForm | Webiness API</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -51,6 +51,7 @@
 			<h3>Functions</h3>
 			<ul>
 				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-barcode.html">barcode</a></li>
 				<li><a href="function-callHook.html">callHook</a></li>
 				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
 			</ul>
@@ -92,9 +93,9 @@ Generates HTML form and form widgets.</p>
 
 <p>Example usage:</p>
 
-<pre><span class="php-var">$form</span> = <span class="php-keyword1">new</span> WsForm(WsUrl::<span class="php-keyword2">link</span>(<span class="php-quote">'controller'</span>, <span class="php-quote">'form_action_script'</span>);
+<pre><span class="php-var">$form</span> = <span class="php-keyword1">new</span> WsForm(WsUrl::<span class="php-keyword2">link</span>(<span class="php-quote">'controller'</span>, <span class="php-quote">'form_action_script'</span>));
 
-<span class="php-comment"># widgets</span>
+<span class="php-comment">// widgets</span>
 <span class="php-var">$form</span>-&gt;textInput(<span class="php-keyword1">array</span>(<span class="php-quote">'name'</span> =&gt; <span class="php-quote">'text_input'</span>));
 <span class="php-var">$form</span>-&gt;textInput(<span class="php-keyword1">array</span>(
     <span class="php-quote">'name'</span> =&gt; <span class="php-quote">'date_input'</span>,
@@ -123,7 +124,7 @@ Generates HTML form and form widgets.</p>
 		
 		
 
-			<b>Located at</b> <a href="source-class-WsForm.html#2-545" title="Go to source code">WsForm.class.php</a>
+			<b>Located at</b> <a href="source-class-WsForm.html#2-599" title="Go to source code">library/WsForm.class.php</a>
 		<br>
 	</div>
 
@@ -143,7 +144,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-WsForm.html#51-70" title="Go to source code">__construct</a>( <span> <var>$action</var> = <span class="php-quote">''</span></span> )</code>
+		<code><a href="source-class-WsForm.html#57-76" title="Go to source code">__construct</a>( <span> <var>$action</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -173,7 +174,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-WsForm.html#73-80" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-WsForm.html#79-86" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -203,7 +204,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_show">#</a>
-		<code><a href="source-class-WsForm.html#112-123" title="Go to source code">show</a>( )</code>
+		<code><a href="source-class-WsForm.html#118-129" title="Go to source code">show</a>( )</code>
 
 		<div class="description short">
 			<p>Display generated form on screen</p>
@@ -233,7 +234,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hiddenInput">#</a>
-		<code><a href="source-class-WsForm.html#125-157" title="Go to source code">hiddenInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsForm.html#131-163" title="Go to source code">hiddenInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Add hidden input element to form</p>
@@ -268,7 +269,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_textInput">#</a>
-		<code><a href="source-class-WsForm.html#160-283" title="Go to source code">textInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsForm.html#166-336" title="Go to source code">textInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Add text input element to form</p>
@@ -303,7 +304,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_textareaInput">#</a>
-		<code><a href="source-class-WsForm.html#286-371" title="Go to source code">textareaInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsForm.html#339-424" title="Go to source code">textareaInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Add multiline text input to form</p>
@@ -338,7 +339,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_booleanInput">#</a>
-		<code><a href="source-class-WsForm.html#374-447" title="Go to source code">booleanInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsForm.html#427-501" title="Go to source code">booleanInput</a>( <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Add checkbox to the form</p>
@@ -373,7 +374,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_selectInput">#</a>
-		<code><a href="source-class-WsForm.html#450-532" title="Go to source code">selectInput</a>( <span>array <var>$list</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsForm.html#504-586" title="Go to source code">selectInput</a>( <span>array <var>$list</var></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Add selection box to the form</p>
@@ -410,7 +411,7 @@ Generates HTML form and form widgets.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_appendHTML">#</a>
-		<code><a href="source-class-WsForm.html#535-544" title="Go to source code">appendHTML</a>( <span>string <var>$html</var></span> )</code>
+		<code><a href="source-class-WsForm.html#589-598" title="Go to source code">appendHTML</a>( <span>string <var>$html</var></span> )</code>
 
 		<div class="description short">
 			<p>Append custom HTML to form</p>
@@ -455,7 +456,7 @@ Generates HTML form and form widgets.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsForm.html#37-40" title="Go to source code"><var>$submitButtonText</var></a>
+				<a href="source-class-WsForm.html#40-44" title="Go to source code"><var>$submitButtonText</var></a>
 
 			<div class="description short">
 				<p>$submitButtonText Text for submit button</p>
@@ -480,7 +481,7 @@ Generates HTML form and form widgets.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsForm.html#41-44" title="Go to source code"><var>$_form</var></a>
+				<a href="source-class-WsForm.html#45-49" title="Go to source code"><var>$_form</var></a>
 
 			<div class="description short">
 				<p>$_form Form body</p>
@@ -508,7 +509,7 @@ Generates HTML form and form widgets.</p>
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Webiness API API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>

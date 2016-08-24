@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class WsController</title>
+	<title>Class WsController | Webiness API</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -51,6 +51,7 @@
 			<h3>Functions</h3>
 			<ul>
 				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-barcode.html">barcode</a></li>
 				<li><a href="function-callHook.html">callHook</a></li>
 				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
 			</ul>
@@ -96,14 +97,14 @@ WsController coordinates the data flow between models and views.</p>
 
 <pre><span class="php-keyword1">class</span> SiteController <span class="php-keyword1">extends</span> WsController
 {
-    <span class="php-comment"># this function handles request to 'http://server_name/site/index'</span>
+    <span class="php-comment">// this function handles request to 'http://server_name/site/index'</span>
     <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> index()
     {
-        <span class="php-comment"># use variable $m in view file</span>
+        <span class="php-comment">// use variable $m in view file</span>
         <span class="php-var">$m</span> = <span class="php-quote">'this is test'</span>;
 
-        <span class="php-comment"># view file 'index.php' is placed in directory</span>
-        <span class="php-comment"># '/application/views/site'</span>
+        <span class="php-comment">// view file 'index.php' is placed in directory</span>
+        <span class="php-comment">// '/application/views/site'</span>
         <span class="php-var">$this</span>-&gt;render(<span class="php-quote">'index'</span>, <span class="php-keyword1">array</span>(<span class="php-quote">'m'</span> =&gt; <span class="php-var">$m</span>));
     }
 }</pre>
@@ -123,7 +124,7 @@ WsController coordinates the data flow between models and views.</p>
 		
 		
 
-			<b>Located at</b> <a href="source-class-WsController.html#2-252" title="Go to source code">WsController.class.php</a>
+			<b>Located at</b> <a href="source-class-WsController.html#2-256" title="Go to source code">library/WsController.class.php</a>
 		<br>
 	</div>
 
@@ -143,7 +144,7 @@ WsController coordinates the data flow between models and views.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-WsController.html#54-59" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-WsController.html#56-61" title="Go to source code">__construct</a>( )</code>
 
 		<div class="description short">
 			
@@ -173,7 +174,7 @@ WsController coordinates the data flow between models and views.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-WsController.html#102-136" title="Go to source code">render</a>( <span> <var>$action</var> = <span class="php-quote">'index'</span></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsController.html#104-138" title="Go to source code">render</a>( <span> <var>$action</var> = <span class="php-quote">'index'</span></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -212,7 +213,7 @@ WsController coordinates the data flow between models and views.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_encodeCSVField">#</a>
-		<code><a href="source-class-WsController.html#138-157" title="Go to source code">encodeCSVField</a>( <span>string <var>$string</var></span> )</code>
+		<code><a href="source-class-WsController.html#140-159" title="Go to source code">encodeCSVField</a>( <span>string <var>$string</var></span> )</code>
 
 		<div class="description short">
 			
@@ -251,7 +252,7 @@ WsController coordinates the data flow between models and views.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getRequestMethod">#</a>
-		<code><a href="source-class-WsController.html#160-184" title="Go to source code">getRequestMethod</a>( )</code>
+		<code><a href="source-class-WsController.html#162-186" title="Go to source code">getRequestMethod</a>( )</code>
 
 		<div class="description short">
 			
@@ -285,7 +286,7 @@ WsController coordinates the data flow between models and views.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_sendResponse">#</a>
-		<code><a href="source-class-WsController.html#187-219" title="Go to source code">sendResponse</a>( <span>mixed <var>$data</var></span>, <span>integer <var>$status</var> = <span class="php-num">200</span></span> )</code>
+		<code><a href="source-class-WsController.html#189-221" title="Go to source code">sendResponse</a>( <span>mixed <var>$data</var></span>, <span>integer <var>$status</var> = <span class="php-num">200</span></span> )</code>
 
 		<div class="description short">
 			<p>Send HTTP response with status and JSON data. It's used for
@@ -324,7 +325,7 @@ implementation of RESTful API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_redirect">#</a>
-		<code><a href="source-class-WsController.html#222-234" title="Go to source code">redirect</a>( <span>string <var>$controller</var></span>, <span>string <var>$action</var> = <span class="php-quote">'index'</span></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsController.html#224-237" title="Go to source code">redirect</a>( <span>string <var>$controller</var></span>, <span>string <var>$action</var> = <span class="php-quote">'index'</span></span>, <span>array <var>$params</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			<p>Redirect HTTP request</p>
@@ -363,7 +364,7 @@ implementation of RESTful API.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_isAjax">#</a>
-		<code><a href="source-class-WsController.html#237-251" title="Go to source code">isAjax</a>( )</code>
+		<code><a href="source-class-WsController.html#240-255" title="Go to source code">isAjax</a>( )</code>
 
 		<div class="description short">
 			
@@ -485,7 +486,7 @@ implementation of RESTful API.</p>
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Webiness API API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>

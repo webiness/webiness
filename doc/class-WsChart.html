@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class WsChart</title>
+	<title>Class WsChart | Webiness API</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -51,6 +51,7 @@
 			<h3>Functions</h3>
 			<ul>
 				<li><a href="function-__autoload.html">__autoload</a></li>
+				<li><a href="function-barcode.html">barcode</a></li>
 				<li><a href="function-callHook.html">callHook</a></li>
 				<li><a href="function-WsErrorHandler.html">WsErrorHandler</a></li>
 			</ul>
@@ -114,7 +115,7 @@ background.</p>
 				array $options Global Chart.js options<br>
 				<b>Var:</b>
 				array $attributes HTML Canvas attributes<br>
-			<b>Located at</b> <a href="source-class-WsChart.html#2-232" title="Go to source code">WsChart.class.php</a>
+			<b>Located at</b> <a href="source-class-WsChart.html#2-242" title="Go to source code">library/WsChart.class.php</a>
 		<br>
 	</div>
 
@@ -134,7 +135,7 @@ background.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-WsChart.html#53-71" title="Go to source code">__construct</a>( <span> <var>$width</var> = <span class="php-quote">''</span></span>, <span> <var>$height</var> = <span class="php-quote">''</span></span>, <span> <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$attributes</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code><a href="source-class-WsChart.html#62-80" title="Go to source code">__construct</a>( <span> <var>$width</var> = <span class="php-quote">''</span></span>, <span> <var>$height</var> = <span class="php-quote">''</span></span>, <span> <var>$options</var> = <span class="php-keyword1">array</span>()</span>, <span> <var>$attributes</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -164,7 +165,7 @@ background.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-WsChart.html#74-78" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-WsChart.html#83-87" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
 			
@@ -194,7 +195,7 @@ background.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_show">#</a>
-		<code><a href="source-class-WsChart.html#81-89" title="Go to source code">show</a>( )</code>
+		<code><a href="source-class-WsChart.html#90-98" title="Go to source code">show</a>( )</code>
 
 		<div class="description short">
 			<p>show chart</p>
@@ -224,7 +225,7 @@ background.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addLabels">#</a>
-		<code><a href="source-class-WsChart.html#92-111" title="Go to source code">addLabels</a>( <span> <var>$label</var></span>, <span> <var>$reset</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-WsChart.html#101-120" title="Go to source code">addLabels</a>( <span> <var>$label</var></span>, <span> <var>$reset</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			<p>add labels for chart</p>
@@ -259,7 +260,7 @@ background.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addDataset">#</a>
-		<code><a href="source-class-WsChart.html#114-129" title="Go to source code">addDataset</a>( <span> <var>$dataset</var></span>, <span> <var>$reset</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-WsChart.html#123-139" title="Go to source code">addDataset</a>( <span> <var>$dataset</var></span>, <span> <var>$reset</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			<p>add datasets to chart</p>
@@ -293,7 +294,7 @@ background.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setType">#</a>
-		<code><a href="source-class-WsChart.html#211-231" title="Go to source code">setType</a>( <span> <var>$type</var></span> )</code>
+		<code><a href="source-class-WsChart.html#221-241" title="Go to source code">setType</a>( <span> <var>$type</var></span> )</code>
 
 		<div class="description short">
 			<p>set chart type</p>
@@ -337,7 +338,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#15-18" title="Go to source code"><var>$_labels</var></a>
+				<a href="source-class-WsChart.html#15-19" title="Go to source code"><var>$_labels</var></a>
 
 			<div class="description short">
 				<p>$_labels Chart labels</p>
@@ -362,7 +363,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#19-22" title="Go to source code"><var>$_datasets</var></a>
+				<a href="source-class-WsChart.html#20-24" title="Go to source code"><var>$_datasets</var></a>
 
 			<div class="description short">
 				<p>$_datasets Chart datasets</p>
@@ -387,7 +388,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#23-26" title="Go to source code"><var>$_options</var></a>
+				<a href="source-class-WsChart.html#25-29" title="Go to source code"><var>$_options</var></a>
 
 			<div class="description short">
 				<p>$_options Global Chart.js options</p>
@@ -412,7 +413,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#27-30" title="Go to source code"><var>$_attributes</var></a>
+				<a href="source-class-WsChart.html#30-34" title="Go to source code"><var>$_attributes</var></a>
 
 			<div class="description short">
 				<p>$_attributes HTML canvas attributes</p>
@@ -437,7 +438,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#31-34" title="Go to source code"><var>$_id</var></a>
+				<a href="source-class-WsChart.html#35-39" title="Go to source code"><var>$_id</var></a>
 
 			<div class="description short">
 				<p>$_id ID of canvas where chart will be drawn</p>
@@ -462,7 +463,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#35-38" title="Go to source code"><var>$_chart</var></a>
+				<a href="source-class-WsChart.html#40-44" title="Go to source code"><var>$_chart</var></a>
 
 			<div class="description short">
 				<p>$_chart Chart object</p>
@@ -487,7 +488,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#39-42" title="Go to source code"><var>$_width</var></a>
+				<a href="source-class-WsChart.html#45-49" title="Go to source code"><var>$_width</var></a>
 
 			<div class="description short">
 				<p>$_width Chart width</p>
@@ -512,7 +513,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#43-46" title="Go to source code"><var>$_height</var></a>
+				<a href="source-class-WsChart.html#50-54" title="Go to source code"><var>$_height</var></a>
 
 			<div class="description short">
 				<p>$_height Chart height</p>
@@ -537,7 +538,7 @@ background.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-WsChart.html#47-50" title="Go to source code"><var>$_type</var></a>
+				<a href="source-class-WsChart.html#55-59" title="Go to source code"><var>$_type</var></a>
 
 			<div class="description short">
 				<h1>_type Chart type</h1>
@@ -565,7 +566,7 @@ background.</p>
 </div>
 
 	<div id="footer">
-		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+		Webiness API API documentation generated by <a href="http://apigen.org">ApiGen</a>
 	</div>
 </div>
 </div>
