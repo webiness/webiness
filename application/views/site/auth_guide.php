@@ -19,7 +19,7 @@
         which features:
         <ol>
             <li>
-                <a href="http://webiness.sourceforge.net/doc/class-WsAuth.html" target="_blank">
+                <a href="doc/class-WsAuth.html" target="_blank">
                     WsAuth
                 </a> class which handles user login, logout, creation of new
                 accounts, cheking permissions of current user, ...
@@ -42,7 +42,7 @@
         <h1 class="text-primary">1. the basic principles</h1>
         Integrated authentication and authorization system, to be functional,
         need to have access to database server. How to configure database access
-        is explained in our <a href="http://webiness.sourceforge.net/index.php?request=site/guide/">
+        is explained in our <a href="index.php?request=site/guide/">
         basic guide</a>.
         <br><br>
         For accessing administration interfaces, webiness uses special user
@@ -63,7 +63,7 @@
         <br/>
         <br/>
         When you run first call to
-        <a href="http://webiness.sourceforge.net/doc/class-WsAuth.html" target="_blank">
+        <a href="doc/class-WsAuth.html" target="_blank">
             WsAuth
         </a> class in your code, it will create all necessary tables in
         database and it will add admin user as it's described above. Internaly
@@ -77,7 +77,7 @@
         First thing that we would like to do with our authentication module is
         check if any user is currently logged in session. To do that, we will
         use public method <strong>checkSession()</strong> from
-        <a href="http://webiness.sourceforge.net/doc/class-WsAuth.html" target="_blank">
+        <a href="doc/class-WsAuth.html" target="_blank">
             WsAuth
         </a> class. For example we may want to allow access to specific
         controller action only for registrated users:

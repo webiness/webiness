@@ -9,17 +9,6 @@
         open-source or proprietary Web applications.
         <br/>
         <br/>
-        <h3 class="text-primary">Install from archive file</h3>
-        Download latest version from sourceforge.net, and then extract it to a
-        Web-accessible folder:
-        <ul>
-            <li>
-                <a
-                href="https://sourceforge.net/projects/webiness/files/latest/download?source=directory">
-                    webiness-1.7.2.tar.xz
-                </a>
-            </li>
-        </ul>
         <h3 class="text-primary">Obtain the Latest Code</h3>
         <pre>
             <code class="git">

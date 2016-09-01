@@ -14,24 +14,15 @@
 	<ul>
 	    <li>View file:
 		<span class="text-error">
-		    <?php echo WsROOT.'/application/view/site/index.php'; ?>
+		    <?php echo 'application/view/site/index.php'; ?>
 		</span>
 	    </li>
 	    <li>Layout file:
 		<span class="text-error">
-		    <?php echo WsROOT.'/public/layouts/webiness.php'; ?>
+		    <?php echo 'public/layouts/webiness.php'; ?>
 		</span>
 	    </li>
 	</ul>
-	
-	<br/>
-	<br/>
-	For more details on how to further develop this application, please read the
-	<a target="_blank" href="http://webiness.sourceforge.net/index.php?request=site/intro/">introduction</a>
-	and <a target="_blank" href="http://webiness.sourceforge.net/doc/index.html">class reference</a>
-	or follow our <a target="_blank" href="http://webiness.sourceforge.net/index.php?request=site/guide/">
-	tutorial</a>.
-    </div>
 </div>
 <br/>
 <br/>

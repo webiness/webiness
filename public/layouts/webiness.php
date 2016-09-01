@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow"/>
     <meta property="og:title" content="Webiness Framework"/>
     <meta property="og:site_name" content="Webiness Framework"/>
-    <meta property="og:url" content="http://www.webiness.org/"/>
+    <meta property="og:url" content="https://webiness.github.io/webiness/"/>
     <meta property="og:description" content="Webiness is a lightweight PHP framework that helps you quickly write simple yet powerful web applications and APIs."/>
     <meta property="og:type" content="website"/>
     <title><?php echo WsConfig::get('app_name').$WsTitle; ?></title>
@@ -101,7 +101,7 @@
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="<?php echo WsSERVER_ROOT; ?>/doc/index.html">
+                            <a target="_blank" href="doc/index.html">
                                 class reference
                             </a>
                         </li>
@@ -172,12 +172,6 @@
 
         <!-- FOOTER -->
         <br/>
-        <div class="row no-print">
-            <div class="column column-12 text-center">
-                <small>&copy; <?php echo date('Y') ?>. Your Company.</small>
-                <small> | technical support: <a mailto="you@yourcompany.com">You</a></small>
-            </div>
-        </div>
     </section>
 
     <!-- INITIALIZE JavaScript  functions -->

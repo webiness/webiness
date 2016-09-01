@@ -504,7 +504,7 @@
             </code>
         </pre>
         Webiness framework has special class
-        <a target="_blank" href="<?php echo WsSERVER_ROOT.'/doc/class-WsModelGridView.html'; ?>">
+        <a target="_blank" href="doc/class-WsModelGridView.html">
             WsModelGridView
         </a> which will do magic and create AJAX based CRUD for your models in
         just two lines of code. So, change our views to this:
