@@ -21,7 +21,7 @@ WsConfig::set('app_tz', 'Europe/Zagreb');
 // default character encoding
 WsConfig::set('html_encoding', 'utf-8');
 // default layout file for HTML rendering. File is located in public/layouts
-WsConfig::set('html_layout', 'webiness.php');
+WsConfig::set('html_layout', 'default.php');
 // site administrators email address - needed for WsAuth
 WsConfig::set('auth_admin', 'you@yourdomain.com');
 // enable semantic (pretty) URLs
