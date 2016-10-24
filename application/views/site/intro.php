@@ -2,13 +2,13 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-    <h1 class="text-primary">Introduction to Webiness</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+    <h1 class="uk-text-primary">Introduction to Webiness</h1>
     <ol>
         <li>
-            <h3 class="text-primary">Naming convention</h3>
-            <h5 class="text-primary">database tables</h5>
+            <h3 class="uk-text-primary">Naming convention</h3>
+            <h5 class="uk-text-primary">database tables</h5>
             For best practice, we propose the following naming conventions for
             database tables and columns. Note that they are not required by
             Webiness.
@@ -31,7 +31,7 @@
                 </li>
             </ul>
             <br/>
-            <h5 class="text-primary">code</h5>
+            <h5 class="uk-text-primary">code</h5>
             <ul>
                 <li>
                     Webiness recommends naming variables, functions and class
@@ -63,7 +63,7 @@
                 </li>
             </ul>
             <br/>
-            <h5 class="text-primary">files</h5>
+            <h5 class="uk-text-primary">files</h5>
             <ul>
                 <li>
                     Class files should be named after the public class they
@@ -83,14 +83,14 @@
             </ul>
         </li>
         <li>
-            <h3 class="text-primary">Webiness directory structure</h3>
+            <h3 class="uk-text-primary">Webiness directory structure</h3>
             After unpacking <a href="<?php echo WsUrl::link('site', 'downloads'); ?>">
             webiness archive</a>, into your Web-accessible folder, you will see
             next directory structure:
             <br/>
             <br/>
             <img src="<?php echo WsUrl::asset('img/guide/dir_structure.png'); ?>"/>
-            <h4 class="text-success">application directory</h4>
+            <h4 class="uk-text-success">application directory</h4>
             This directory contains application logic of your application.
             Becouse webiness framework follows Model-View-Controller (MVC)
             design pattern, in toplevel of this directory you will find three
@@ -99,38 +99,38 @@
             <br/>
             <ul>
                 <li>
-                    <span class="text-error">controllers: </span>
+                    <span class="uk-text-error">controllers: </span>
                     contains controller classes
                 </li>
                 <li>
-                    <span class="text-error">models: </span>
+                    <span class="uk-text-error">models: </span>
                     contains model classes
                 </li>
                 <li>
-                    <span class="text-error">views: </span>
+                    <span class="uk-text-error">views: </span>
                     stores controller actions view scripts
                 </li>
             </ul>
-            <div class="callout warning">
+            <div class="uk-alert uk-alert-warning">
                 <strong>Note: </strong>
                 for each controller class you must create sub-directory
                 under "views" directory and put coresponding view files under
                 that directory.
             </div>
-            <h4 class="text-success">public directory</h4>
+            <h4 class="uk-text-success">public directory</h4>
             contains all files that are shared between web pages
             like: css, images, layout file, javascript files, etc.
-            <h4 class="text-success">lang directory</h4>
+            <h4 class="uk-text-success">lang directory</h4>
             contains translation text files which are used to
             translate messages from your application into web browser's
             default language.
-            <h4 class="text-success">runtime directory</h4>
+            <h4 class="uk-text-success">runtime directory</h4>
             stores dynamically generated files.
-            <div class="callout warning">
+            <div class="uk-alert uk-alert-warning">
                 <strong>Note: </strong>
                 Web server must have write permission on this directory
             </div>
-            <h4 class="text-success">protected and doc directories</h4>
+            <h4 class="uk-text-success">protected and doc directories</h4>
             these are framework's internal directories. protected directory
             contains framework classes and javascript libraryes and doc contains
             framework's class reference documentation.
@@ -139,7 +139,7 @@
         </li>
 
         <li>
-            <h3 class="text-primary">Webiness configuration file</h3>
+            <h3 class="uk-text-primary">Webiness configuration file</h3>
             Under
             <span style="color: #A52A2A;">
                 protected/config</span> directory, there is file named
@@ -217,76 +217,6 @@
             protected/config/config-example.php</span> file
             to <span style="color: #A52A2A;">protected/config/config.php</span>
             and edit config options to suit your needs.
-        </li>
-
-        <li>
-            <h3 class="text-primary">Webiness CSS framework</h3>
-            To keep small size and high speed of page loading, Webiness use it's
-            own small CSS framework, instead of bootstrap, foundation or etc.
-            Webiness CSS framework is located in <span style="color: #A52A2A;">
-            public/css/webiness.css</span> and <span style="color: #A52A2A;">
-            public/css/webiness.min.css</span> files.
-            <br/><br/> Basic features include:
-            <ul>
-                <li>
-                    a responsive, mobile friendly, grid system with up to 12
-                    columns
-                </li>
-                <li>
-                    <strong>row</strong> class to create horizontal groups
-                    of columns
-                </li>
-                <li>
-                    <strong>column</strong> class to create column and
-                    <strong>column-*</strong> class to define width of column
-                    where <strong>*</strong> is number from 1 to 12
-                </li>
-                <li>
-                    move columns to the right using <strong>column-offset-*</strong>
-                    class. This class incrise left margin of column by
-                    <strong>*</strong> columns
-                </li>
-                <li>
-                    create multilevel responsive navigation header with use of
-                    <strong>ws-header</strong> class
-                </li>
-                <li>
-                    align texts with three alignment classes <strong>text-left</strong>
-                    , <strong>text-right</strong> and <strong>text-center</strong>
-                </li>
-                <li>
-                    responsive tables
-                </li>
-                <li>
-                    global styling for form controls
-                </li>
-                <li>
-                    <strong>pagination</strong> class in <strong>ul</strong>
-                    element to create pagination links
-                </li>
-                <li>
-                    <strong>link-button</strong> class for button styling
-                </li>
-                <li>
-                    create message boxes with <strong>callout</strong> class
-                </li>
-                <li>
-                    color classes: <strong class="primary">primary</strong>,
-                    <strong class="text-primary">text-primary</strong>,
-                    <strong class="success">success</strong>,
-                    <strong class="text-success">text-success</strong>,
-                    <strong class="warning">warning</strong>,
-                    <strong class="text-warning">text-warning</strong>,
-                    <strong class="error">error</strong>,
-                    <strong class="text-error">text-error</strong>
-                </li>
-            </ul>
-            <br/>
-            Webiness CSS framework is included in default layout file for web
-            application. Of course, you can use any other CSS framework's with
-            Webiness, but we recomend that you keep webiness.css beside them
-            becouse some Webiness components depends on it
-            (WsModelGridView for instance).
         </li>
     </ol>
     <br/><br/><br/>

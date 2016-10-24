@@ -2,8 +2,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
         User authentication and authorization are required for a Web page that
         should be limited to certain users.
         <br/><br/>
@@ -37,9 +37,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">1. the basic principles</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">1. the basic principles</h1>
         Integrated authentication and authorization system, to be functional,
         need to have access to database server. How to configure database access
         is explained in our <a href="index.php?request=site/guide/">
@@ -71,9 +71,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">2. checking is user logged in and get basic user informations</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">2. checking is user logged in and get basic user informations</h1>
         First thing that we would like to do with our authentication module is
         check if any user is currently logged in session. To do that, we will
         use public method <strong>checkSession()</strong> from
@@ -140,9 +140,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">3. register, login, edit and logout</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">3. register, login, edit and logout</h1>
         Webiness has builtin actions for user registration, user login,
         edit account details and logout. You can create links to them by
         adding something like this to your view:
@@ -169,7 +169,7 @@
                 &lt;/a&gt;
             </code>
         </pre>
-        <div class="text-center">
+        <div class="uk-text-center">
         <?php
             $img = new WsImage();
             $img->read('public/img/guide/register_form.png');
@@ -279,9 +279,9 @@
 </div>
 
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">4. administrating user accounts, roles and permissions</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">4. administrating user accounts, roles and permissions</h1>
         Role based access control (RBAC) is a model in which roles are created
         for various job functions, and permissions to perform certain operations
         are then tied to roles. A user can be assigned one or multiple roles
@@ -331,7 +331,7 @@
         users that have statistician role can see reports and users with
         supervisor role can do both. As you can see from screenshots (click to
         enlarge) administration UI is very simple and easy to use.
-        <div class="text-center">
+        <div class="uk-text-center">
         <?php
             $img = new WsImage();
             $img->read('public/img/guide/auth_admin.png');

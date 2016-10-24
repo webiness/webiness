@@ -1,0 +1,30 @@
+3.0
+        * redesign error handling routine.
+        * use spl_autoload_register() instead of __autoload().
+        * add isAjax() method to WsController class.
+        * add redirect() method to WsController class.
+        * add sendResponse() methot to WsController class.
+        * add currentUser() and currentUserID() methods to
+          WsAuth class.
+        * add getLang() method to WsLocalize class.
+        * code cleanup.
+        * bug fixes.
+
+2.3
+        * autocreate database tables on first run.
+        * add execute_batch methot to WsDatabase class whic executes
+          SQL scripts on database.
+        * bug fixes.
+
+2.2
+        * add WsChart class for chart drawing.
+        * bug fixes.
+
+2.1
+        * add WsImage class for simple image manipulation.
+        * add support for SQLite database engine.
+        * bug fixes.
+
+2.0
+        * First stable/useful (to someone) version.
+

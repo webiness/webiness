@@ -2,9 +2,9 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        For purpose of this tutorial, we will build simple expanse tracking
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        For purpose of this guide, we will build simple expanse tracking
         application. Every application development proccess include at least few
         steps, and we will divide our process into:
         <ol>
@@ -16,9 +16,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">1. configure database access</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">1. configure database access</h1>
         Open <span style="color: #A52A2A;">protected/config/config.php</span>
         file and configure access to your database server like this:
         <pre>
@@ -59,9 +59,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">2. design database</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">2. design database</h1>
         For our small project we will use two database tables. First will
         contain expanse categories and other will contain expanse records it
         self. If you use PostgreSQl enter this SQL code:
@@ -108,16 +108,16 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">3. models</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">3. models</h1>
         Models are part of <a target="_blank" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>
         architecture. They are objects representing business data, rules and
         logic. In Webiness framework, you create model classes by extending
         <a target="_blank" href="<?php echo WsSERVER_ROOT.'/doc/class-WsModel.html'; ?>">
             WsModel
         </a> class.
-        <h3 class="text-primary">3.1. creating model</h3>
+        <h3 class="uk-text-primary">3.1. creating model</h3>
         Create two files that will refference to data in our
         <strong>expense_type</strong> and <strong>expense</strong> database tables.
         <br/>
@@ -150,7 +150,7 @@
                 }
             </code>
         </pre>
-        <h3 class="text-primary">3.2. attributes</h3>
+        <h3 class="uk-text-primary">3.2. attributes</h3>
         Models represent business data in terms of attributes. Each attribute is
         like a publicly accessible property of a model.
         <br/>
@@ -169,7 +169,7 @@
         constructor then your model will be automaticaly filled with attributes
         corresponding to your database table. You can have, also, other
         attributes defined in your model class, based on your needs.
-        <h3 class="text-primary">3.3. model classes as Active Record objects</h3>
+        <h3 class="uk-text-primary">3.3. model classes as Active Record objects</h3>
         <a target="_blank" href="http://en.wikipedia.org/wiki/Active_record_pattern">
             Active Record
         </a> provides object-oriented interface for accessing and manipulating
@@ -224,7 +224,7 @@
                 var_dump($res);
             </code>
         </pre>
-        <h3 class="text-primary">3.4. attribute labels</h3>
+        <h3 class="uk-text-primary">3.4. attribute labels</h3>
         When displaying values or getting input for attributes, you often need
         to display some labels associated with attributes. For example, given an
         attribute named <span style="color: #A52A2A;">name </span>, you may want
@@ -286,9 +286,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">4. controllers</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">4. controllers</h1>
         Controllers are part of
         <a target="_blank" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>
         architecture. They are responsible for processing requests and
@@ -296,7 +296,7 @@
         most basic units that end users can address and request for execution.
         A controller can have one or multiple actions. An action method is a
         public method in controller class.
-        <h3 class="text-primary">4.1. routes</h3>
+        <h3 class="uk-text-primary">4.1. routes</h3>
         End users address actions through the so-called routes. Routes take the
         following format:
         <pre>
@@ -309,7 +309,7 @@
             http://hostname/index.php?request=site/index
         </span>, the <span style="color: #A52A2A;">index</span> action in the
         <span style="color: #A52A2A;">site</span> controller will be executed.
-        <h3 class="text-primary">4.2. creating controller</h3>
+        <h3 class="uk-text-primary">4.2. creating controller</h3>
         Create file with controller class that will contain three actions.
         <br/>
         <br/>
@@ -362,9 +362,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">5. views</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">5. views</h1>
         Views are part of
         <a target="_blank" href="http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">MVC</a>
         architecture.  They are code responsible for presenting data to end
@@ -405,7 +405,7 @@
                 }
             </code>
         </pre>
-        <h3 class="text-primary">5.1. organizing views</h3>
+        <h3 class="uk-text-primary">5.1. organizing views</h3>
         For views rendered by a controller, they should be put under the
         directory
         <span style="color: #A52A2A;">
@@ -420,7 +420,7 @@
             PostController
         </span>, the directory would be
         <span style="color: #A52A2A;">application/views/post</span>.
-        <h3 class="text-primary">5.2. creating views</h3>
+        <h3 class="uk-text-primary">5.2. creating views</h3>
         Create sub directory <span style="color: #A52A2A;">expense</span> in
         <span style="color: #A52A2A;">applications/views</span> directory and
         put these three files in it:
@@ -470,9 +470,9 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <h1 class="text-primary">6. CRUD</h1>
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <h1 class="uk-text-primary">6. CRUD</h1>
         Open again our controller file
         <span style="color: #A52A2A;">
             application/controller/ExpenseController.php
@@ -515,8 +515,8 @@
         </span>
         <pre>
             <code class="xml">
-                &lt;div class="row"&gt;
-                    &lt;div class="column column-8 column-offset-2"&gt;
+                &lt;div class="uk-grid"&gt;
+                    &lt;div class="uk-width-9-10 uk-container-center"&gt;
                     &lt;?php
                         $grid = new WsModelGridView($model);
                         $grid->show();
@@ -530,8 +530,8 @@
         </span>
         <pre>
             <code class="xml">
-                &lt;div class="row"&gt;
-                    &lt;div class="column column-8 column-offset-2"&gt;
+                &lt;div class="uk-grid"&gt;
+                    &lt;div class="uk-width-9-10 uk-container-center"&gt;
                     &lt;?php
                         $grid = new WsModelGridView($model);
                         $grid->show();
@@ -543,7 +543,7 @@
         Now, if you open your application, you will see grid with data columns:
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud1.png'); ?>"/>
         </div>
@@ -553,7 +553,7 @@
         existing items and removal of existing items:
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud-add.png'); ?>"/>
             <br/>
@@ -561,7 +561,7 @@
         </div>
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud-edit.png'); ?>"/>
             <br/>
@@ -569,7 +569,7 @@
         </div>
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud-delete.png'); ?>"/>
             <br/>
@@ -577,11 +577,11 @@
         </div>
         <br/>
         <br/>
-        <h3 class="text-primary">6.1. customizing CRUD</h3>
+        <h3 class="uk-text-primary">6.1. customizing CRUD</h3>
         When you open second page and try to add new item:
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud-add2.png'); ?>"/>
             <br/>
@@ -622,7 +622,7 @@
         now we get desired values in our foreign key selection box:
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud-add3.png'); ?>"/>
         </div>
@@ -661,21 +661,21 @@
         and final result will be:
         <br/>
         <br/>
-        <div class="text-center">
+        <div class="uk-text-center">
         <img style="border: 1px solid #1E90FF"
             width="560" src="<?php echo WsUrl::asset('img/guide/crud-add4.png'); ?>"/>
         </div>
     </div>
 </div>
 
-<div class="row">
+<div class="uk-grid">
     <br/>
     <br/>
 </div>
 
-<div class="row">
-    <div class="column column-8 column-offset-2">
-        <div class="callout warning">
+<div class="uk-grid">
+    <div class="uk-width-9-10 uk-container-center">
+        <div class="uk-alert uk-alert-warning">
             <strong>Note: </strong><br/><br/>
             In all our examples, and framework itself, we use coding style:
             <pre>
