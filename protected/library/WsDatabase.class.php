@@ -114,7 +114,7 @@ class WsDatabase
                 E_USER_ERROR);
             return false;
         }
-        
+
         // bind values
         foreach ($parameters as $key => &$value) {
             if (is_int($value)) {
@@ -177,7 +177,7 @@ class WsDatabase
 
         // bind values
         foreach ($parameters as $key => $value) {
-            if (is_numeric($value)) {
+            if (is_int($value)) {
                 $sth->bindValue(":$key", $value, PDO::PARAM_INT);
             } else if (is_bool($value)) {
                 if (WsConfig::get('db_driver') === 'pgsql') {

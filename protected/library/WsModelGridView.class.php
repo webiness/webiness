@@ -8,6 +8,8 @@
  *
  * @param WsModel $model Instance of WsModel class
  * @param string $order Sorting order for a grid
+ * @param string $edit_action Action which will be called on add and edit action
+ * @param string $delete_model Action which will be called on delete action
  *
  * Example usage:
  *
